@@ -1,13 +1,19 @@
+import BlurFade from "@/components/magicui/blur-fade";
+
 export const Hero = () => {
   return (
-    <section>
-      <div className="flex flex-col justify-center">
-        <h1 className="text-center text-5xl m-3 font-bold text-primaryColor">
-          Home Page
-        </h1>
-        <div className="box mx-4 inline-block p-[20px] rounded-lg bg-primaryColor">
-          <h2 className="text-center text-foreground">This is a box</h2>
-        </div>
+    <section className="h-screen flex items-center justify-center">
+      <div className="flex flex-col gap-1">
+        <BlurFade delay={0.25} inView>
+          <h1 className="text-5xl sm:text-8xl font-medium text-pretty text-primaryColor">
+            Dawson Par
+          </h1>
+        </BlurFade>
+        <BlurFade delay={0.25 * 2} inView>
+          <h2 className="text-xl sm:text-3xl xl:text-4xl/none font-thin text-pretty text-center text-primaryColor">
+            Software Engineer
+          </h2>
+        </BlurFade>
       </div>
     </section>
   );
