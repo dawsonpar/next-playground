@@ -7,11 +7,15 @@ export default function Home() {
   const [isDark, setIsDark] = useLocalStorage("isDark", false);
 
   useEffect(() => {
-    document.body.setAttribute("data-theme", isDark ? "dark" : "light");
+    if (isDark) {
+      document.body.classList.add("dark");
+    } else {
+      document.body.classList.remove("dark");
+    }
   }, [isDark]);
 
   return (
-    <div className="flex flex-col" data-theme={isDark ? "dark" : "light"}>
+    <div className="flex flex-col">
       <Hero />
       <button
         className="m-5 bg-foreground text-toggle font-bold py-2 px-4 rounded-full"
