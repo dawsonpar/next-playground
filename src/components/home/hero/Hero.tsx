@@ -15,7 +15,15 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="h-screen flex items-center justify-center">
+    <section className="snap-section flex items-center justify-center relative">
+      <Particles
+        className="absolute inset-0"
+        quantity={50}
+        ease={80}
+        size={2}
+        color={primaryColor}
+        refresh
+      />
       <div className="flex flex-col gap-1">
         <BlurFade delay={0.25} inView>
           <h1 className="text-5xl sm:text-8xl font-medium text-pretty text-primaryColor">
@@ -27,14 +35,6 @@ export const Hero = () => {
             Software Engineer
           </h2>
         </BlurFade>
-        <Particles
-          className="absolute inset-0"
-          quantity={100}
-          ease={80}
-          size={2}
-          color={primaryColor} // Pass the primary color as a prop
-          refresh
-        />
       </div>
     </section>
   );

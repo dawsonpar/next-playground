@@ -33,7 +33,7 @@
   .dark {
     --background: #241f19;
     --foreground: #e7d7c9;
-    --primary-color: #626d5c;
+    --primary-color: #6b7864;
     --toggle: #626d5c;
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -82,4 +82,21 @@ html {
   -o-tab-size: 4;
   tab-size: 4;
   -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.snap-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  height: 100vh;
 }
