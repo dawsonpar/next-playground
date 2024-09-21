@@ -1,6 +1,19 @@
 import BlurFade from "@/components/magicui/blur-fade";
+import Particles from "@/components/magicui/particles";
+import { useEffect, useState } from "react";
 
 export const Hero = () => {
+  const [primaryColor, setPrimaryColor] = useState("#ffffff");
+
+  useEffect(() => {
+    // Extract the primary color from CSS
+    const rootStyle = getComputedStyle(document.documentElement);
+    const primaryColorValue = rootStyle
+      .getPropertyValue("--primary-color")
+      .trim();
+    setPrimaryColor(primaryColorValue);
+  }, []);
+
   return (
     <section className="h-screen flex items-center justify-center">
       <div className="flex flex-col gap-1">
@@ -14,6 +27,14 @@ export const Hero = () => {
             Software Engineer
           </h2>
         </BlurFade>
+        <Particles
+          className="absolute inset-0"
+          quantity={100}
+          ease={80}
+          size={2}
+          color={primaryColor} // Pass the primary color as a prop
+          refresh
+        />
       </div>
     </section>
   );
