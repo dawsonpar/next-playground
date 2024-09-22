@@ -11,6 +11,7 @@ import {
 } from "@radix-ui/react-icons";
 import { Separator } from "./Separator";
 import { ModeToggle } from "./ModeToggle";
+import Link from "next/link";
 
 const scrollToSection = (id: string) => {
   const section = document.getElementById(id);
@@ -61,14 +62,14 @@ export const NavDock = () => {
         </DockIcon>
         <Separator orientation="vertical" className="h-full bg-primaryColor" />
         <DockIcon className="text-primaryColor hover:bg-white/50 transition ease-in-out duration-300">
-          <a href="#home">
+          <Link href="https://github.com/dawsonpar">
             <GitHubLogoIcon />
-          </a>
+          </Link>
         </DockIcon>
         <DockIcon className="text-primaryColor hover:bg-white/50 transition ease-in-out duration-300">
-          <a href="#home">
+          <Link href="https://www.linkedin.com/in/dawsonpar/">
             <LinkedInLogoIcon />
-          </a>
+          </Link>
         </DockIcon>
         <Separator orientation="vertical" className="h-full bg-primaryColor" />
         <DockIcon className="text-primaryColor hover:bg-white/50 transition ease-in-out duration-300">
