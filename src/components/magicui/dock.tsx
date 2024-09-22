@@ -73,6 +73,7 @@ export interface DockIconProps {
   className?: string;
   children?: React.ReactNode;
   props?: PropsWithChildren;
+  onClick?: () => void;
 }
 
 const DockIcon = ({
@@ -82,6 +83,7 @@ const DockIcon = ({
   mousex,
   className,
   children,
+  onClick,
   ...props
 }: DockIconProps) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -112,6 +114,7 @@ const DockIcon = ({
         "flex aspect-square cursor-pointer items-center justify-center rounded-full",
         className
       )}
+      onClick={onClick}
       {...props}
     >
       {children}

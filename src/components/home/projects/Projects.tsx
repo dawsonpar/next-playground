@@ -1,12 +1,12 @@
 import React from "react";
 
-export const About = () => {
+export const Projects = () => {
   return (
     <section
-      id="about"
+      id="projects"
       className="snap-section flex items-center justify-center"
     >
-      <h2>ABOUT</h2>
+      <h2>PROJECTS</h2>
     </section>
   );
 };

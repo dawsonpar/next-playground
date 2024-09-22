@@ -15,7 +15,10 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section className="snap-section flex items-center justify-center relative">
+    <section
+      id="hero"
+      className="snap-section flex items-center justify-center relative"
+    >
       <Particles
         className="absolute inset-0"
         quantity={50}
