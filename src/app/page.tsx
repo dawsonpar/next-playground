@@ -1,4 +1,5 @@
 import Home from "../components/home/Home";
+import { NavDock } from "@/components/nav/NavDock";
 
 export const metadata = {
   title: "Dawson Par",
@@ -16,6 +17,7 @@ export const viewport = {
 export default function HomePage() {
   return (
     <>
+      <NavDock />
       <Home />
     </>
   );
